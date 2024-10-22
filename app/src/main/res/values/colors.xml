@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6200EE</color> <!-- Purple 500 -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Purple 700 -->
+    <color name="colorPrimaryLight">#BB86FC</color> <!-- Purple 200 -->
+
+    <!-- Accent color -->
+    <color name="colorAccent">#03DAC5</color> <!-- Teal A200 -->
+    <color name="indigo">#4B0082</color>
+
+</resources>

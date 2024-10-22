@@ -1,0 +1,143 @@
+<!-- res/drawable/notebook_lines.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warna dasar putih sebagai latar -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/>
+        </shape>
+    </item>
+
+    <!-- Garis horizontal -->
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/> <!-- Menentukan jarak antar garis -->
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/> <!-- Warna garis -->
+        </shape>
+    </item>
+
+    <!-- Garis horizontal kedua -->
+    <item android:top="50dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+
+    <!-- Garis horizontal ketiga -->
+    <item android:top="100dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+
+    <!-- Warna dasar putih sebagai latar -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/>
+        </shape>
+    </item>
+
+    <!-- Garis horizontal -->
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/> <!-- Menentukan jarak antar garis -->
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/> <!-- Warna garis -->
+        </shape>
+    </item>
+
+    <!-- Garis horizontal kedua -->
+    <item android:top="50dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+
+    <!-- Garis horizontal ketiga -->
+    <item android:top="100dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+    <item android:top="150dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+
+    <!-- Garis horizontal ketiga -->
+    <item android:top="200dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+    <item android:top="250dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+    <item android:top="300dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+    <item android:top="350dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+    <item android:top="400dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+    <item android:top="450dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+    <item android:top="500dp">
+        <shape android:shape="rectangle">
+            <size android:height="50dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#DDDDDD"/>
+        </shape>
+    </item>
+    <!-- Tambahkan lebih banyak item untuk membuat lebih banyak garis -->
+</layer-list>

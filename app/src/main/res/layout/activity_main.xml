@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/indigo"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:text="Collection Data"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="#8E24AA" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lstPengajuanCredit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/indigo" />
+
+    <Button
+        android:id="@+id/btnTambahKredit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8100A2"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</LinearLayout>
