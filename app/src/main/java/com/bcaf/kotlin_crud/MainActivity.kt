@@ -65,7 +65,12 @@ class MainActivity : AppCompatActivity(), CreditAdapter.OnCreditItemRemoveListen
     }
 
     // Handle remove button click
-   8
+    // Handle remove button click
+    override fun onRemoveClick(item: PengajuanCreditItem?, position: Int) {
+        item?.id?.let { id ->
+            viewModel.deletePengajuanCredit(id.toRequestBody())
+        }
+    }
 
     }
 
