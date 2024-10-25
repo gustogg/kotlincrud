@@ -1,6 +1,6 @@
 package com.bcaf.kotlin_crud
 
-import android.content.Intent // Add this import statement
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -15,9 +15,8 @@ import com.bcaf.kotlin_crud.adapter.CreditAdapter
 import com.bcaf.kotlin_crud.model.PengajuanCreditItem
 import com.bcaf.kotlin_crud.viewmodel.PengajuanCreditViewModel
 import okhttp3.RequestBody.Companion.toRequestBody
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
 
-class MainActivity : AppCompatActivity(), CreditAdapter.OnCreditItemRemoveListener {
+class MainActivity : AppCompatActivity(), CreditAdapter.OnCreditItemRemoveListener, CreditAdapter.OnCreditItemDetailListener {
 
     lateinit var viewModel: PengajuanCreditViewModel
     lateinit var lstPengajuanCredit: RecyclerView
@@ -52,8 +51,8 @@ class MainActivity : AppCompatActivity(), CreditAdapter.OnCreditItemRemoveListen
         // Observe data and set adapter
         viewModel.getPengajuanCredit.observe(this) {
             val datax = it.data?.pengajuanCredit
-            datax?.let { it1 ->
-                lstPengajuanCredit.adapter = CreditAdapter(it1, this)
+            datax?.let { creditList ->
+                lstPengajuanCredit.adapter = CreditAdapter(creditList, this, this) // Pass both listeners
                 lstPengajuanCredit.adapter?.notifyDataSetChanged()
             }
         }
@@ -65,15 +64,22 @@ class MainActivity : AppCompatActivity(), CreditAdapter.OnCreditItemRemoveListen
     }
 
     // Handle remove button click
-    // Handle remove button click
     override fun onRemoveClick(item: PengajuanCreditItem?, position: Int) {
         item?.id?.let { id ->
             viewModel.deletePengajuanCredit(id.toRequestBody())
         }
     }
 
+    // Handle detail button click
+    override fun onDetailClick(item: PengajuanCreditItem?, position: Int) {
+        // Example: Navigate to a detail activity or show detailed info
+        item?.let {
+            Log.d("Credit Detail", "Details of item ID: ${it.id}")
+            val intent = Intent(this, CreditDetailActivity::class.java)
+            intent.putExtra("credit_id", it.id)
+
+            
+            startActivity(intent)
+        }
     }
-
-
-
-
+}

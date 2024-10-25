@@ -31,10 +31,11 @@
         </activity>
 
         <activity
-            android:name=".DocumentReimbursment"
+            android:name=".CreditDetailActivity"
             android:exported="true">
 
         </activity>
+
 
     </application>
 

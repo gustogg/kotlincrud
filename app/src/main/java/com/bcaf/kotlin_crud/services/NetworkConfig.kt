@@ -18,13 +18,13 @@ class NetworkConfig {
             .build()
 
         return Retrofit.Builder()
-            .baseUrl("https://e538-103-165-222-114.ngrok-free.app/cicool/api/")
+            .baseUrl("https://26a1-114-79-3-57.ngrok-free.app/cicool/api/")
 
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
-    fun getServiceReimburstment() = getRetrofit().create(ReimburstmentServices::class.java)
+//    fun getServiceReimburstment() = getRetrofit().create(ReimburstmentServices::class.java)
     fun getServicePengajuanCredit() = getRetrofit().create(PengajuanCreditServices::class.java)
 
 }

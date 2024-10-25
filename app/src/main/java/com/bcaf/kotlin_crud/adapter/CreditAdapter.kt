@@ -10,7 +10,8 @@ import com.bcaf.kotlin_crud.model.PengajuanCreditItem
 
 class CreditAdapter(
     private val creditList: List<PengajuanCreditItem?>,
-    private val listener: OnCreditItemRemoveListener
+    private val listener: OnCreditItemRemoveListener,
+    private val listenerx: OnCreditItemDetailListener
 ) : RecyclerView.Adapter<CreditAdapter.CreditViewHolder>() {
 
     inner class CreditViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -19,6 +20,7 @@ class CreditAdapter(
         var txtAlamatItemCredit = itemView.findViewById<TextView>(R.id.txtAlamatCredit)
         var txtOspoCredit = itemView.findViewById<TextView>(R.id.txtOspoCredit)
         var btnRemove = itemView.findViewById<TextView>(R.id.btnRemove)
+        var btnDetail = itemView.findViewById<TextView>(R.id.btnDetail)
 
     }
 
@@ -41,6 +43,14 @@ class CreditAdapter(
         holder.btnRemove.setOnClickListener {
             listener.onRemoveClick(credit, position)
         }
+
+        holder.btnDetail.setOnClickListener {
+            listenerx.onDetailClick(credit, position)
+        }
+    }
+
+    interface OnCreditItemDetailListener {
+        fun onDetailClick(item: PengajuanCreditItem?, position: Int)
     }
 
     interface OnCreditItemRemoveListener {

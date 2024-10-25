@@ -53,7 +53,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
-                android:layout_width="200dp"
+                android:layout_width="181dp"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimaryLight"
                 android:gravity="center"
@@ -103,7 +103,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:padding="5dp">
@@ -120,6 +120,30 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="#C020D7"
+                android:backgroundTint="#8E24AA">
+
+                <Button
+                    android:id="@+id/btnDetail"
+                    android:layout_width="49dp"
+                    android:layout_height="72dp"
+                    android:background="#00FFFFFF"
+                    android:backgroundTint="#00FFFFFF"
+                    android:text="Button" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="37dp"
+                    android:layout_height="34dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/btnDetail"
+                    app:srcCompat="@android:drawable/ic_menu_info_details" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
